@@ -1,0 +1,20 @@
+# secrets — never commit
+.env
+*.env
+!.env.example
+*.jks
+*.keystore
+local.properties
+# build output
+build/
+.gradle/
+*.apk
+*.aab
+# python
+__pycache__/
+.venv/
+.pytest_cache/
+# ide
+.idea/
+*.iml
+.DS_Store

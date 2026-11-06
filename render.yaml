@@ -1,0 +1,19 @@
+# Optional Render blueprint. Secrets are set in the Render dashboard (sync: false), never in git.
+services:
+  - type: web
+    name: tradebrain-api
+    runtime: docker
+    dockerContext: backend
+    dockerfilePath: backend/Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - { key: DATABASE_URL, sync: false }
+      - { key: SUPABASE_URL, sync: false }
+      - { key: SUPABASE_ANON_KEY, sync: false }
+      - { key: SUPABASE_SERVICE_ROLE_KEY, sync: false }
+      - { key: ADMIN_TOKEN, sync: false }
+      - { key: GEMINI_API_KEY_1, sync: false }
+      - { key: GEMINI_API_KEY_2, sync: false }
+      - { key: GEMINI_API_KEY_3, sync: false }
+      - { key: GEMINI_API_KEY_4, sync: false }
+      - { key: GEMINI_API_KEY_5, sync: false }

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TradeBrain · API Keys</title>
+<link rel="stylesheet" href="admin.css"></head>
+<body>
+<header><h1>TradeBrain AI · API Key Management</h1>
+<div class="row"><input id="token" type="password" placeholder="Admin token" autocomplete="off">
+<button id="save">Connect</button><button id="refresh">Refresh</button>
+<button id="testall">Test all keys</button></div></header>
+<p id="msg" class="muted"></p>
+<section id="summary" class="cards"></section>
+<h2>Keys</h2>
+<div class="scroll"><table><thead><tr><th>ID</th><th>Key</th><th>Status</th><th>Last success</th>
+<th>Requests</th><th>Failures</th><th>429s</th><th>Tokens</th><th>Last error</th><th></th></tr></thead>
+<tbody id="keys"></tbody></table></div>
+<h2>Recent errors</h2>
+<div class="scroll"><table><thead><tr><th>Time</th><th>Key</th><th>Type</th><th>HTTP</th><th>Message</th></tr></thead>
+<tbody id="events"></tbody></table></div>
+<p id="note" class="muted"></p>
+<script src="admin.js"></script></body></html>
